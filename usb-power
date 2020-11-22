@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ "${1}" == "on" ]]; then
+	echo '1-1' | sudo tee /sys/bus/usb/drivers/usb/bind
+else
+	echo '1-1' | sudo tee /sys/bus/usb/drivers/usb/unbind
+fi

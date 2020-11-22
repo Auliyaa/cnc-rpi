@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import RPi.GPIO as GPIO
+import sys
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+
+led_red = 11
+led_green = 13
+
+GPIO.setup(led_green, GPIO.OUT)
+GPIO.setup(led_red, GPIO.OUT)
+
+if sys.argv[1] == 'r':
+	GPIO.output(led_red, GPIO.HIGH)
+	GPIO.output(led_green, GPIO.LOW)
+if sys.argv[1] == 'g':
+	GPIO.output(led_green, GPIO.HIGH)
+	GPIO.output(led_red, GPIO.LOW)
+
