@@ -1,0 +1,13 @@
+[Unit]
+Description=Check CNC services and provides LED feedback
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/usr/bin/check-services-statusd
+
+[Install]
+WantedBy=multi-user.target

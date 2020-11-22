@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+	check-services-status
+	sleep 1
+done
